@@ -19,8 +19,11 @@ Including another URLconf
 # Uncomment next two lines to enable admin:
 #from django.contrib import admin
 #from django.urls import path
-
+from django.conf.urls import include, url
+import HiyaApp.views
 urlpatterns = [
+        url(r'^$', HiyaApp.views.index, name='index'),
+    url(r'^home$', HiyaApp.views.index, name='home'),
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
 ]
